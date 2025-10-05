@@ -30,6 +30,13 @@ export default function Navbar(){
     return initials || base[0].toUpperCase();
   };
 
+  const role = user?.role || 'user';
+  const roleBadgeClass = role === 'admin'
+    ? 'badge bg-rose-100 text-rose-700'
+    : role === 'agent'
+      ? 'badge bg-violet-100 text-violet-700'
+      : 'badge bg-slate-200 text-slate-700';
+
   return (
     <nav className="navbar">
       <div className="navbar-content">
@@ -67,7 +74,7 @@ export default function Navbar(){
               )}
               <li className={`navbar-user ${open ? 'open' : ''}`} ref={menuRef}>
                 <button 
-                  className="btn btn-sm btn-secondary"
+                  className="btn btn-sm btn-secondary hover:shadow-md focus:outline-none focus:ring-2 focus:ring-blue-200"
                   onClick={() => setOpen(v => !v)}
                 >
                   <span className="avatar avatar-sm">{getInitials(displayName)}</span>
@@ -77,6 +84,9 @@ export default function Navbar(){
                     <div className="dropdown-header">
                       <div className="font-semibold">{user?.name || displayName}</div>
                       <div className="text-xs text-gray-600">{user?.email}</div>
+                      <div className="mt-2">
+                        <span className={roleBadgeClass}>{role}</span>
+                      </div>
                     </div>
                     <button className="dropdown-item" onClick={logout}>Logout</button>
                   </div>
