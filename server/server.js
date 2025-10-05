@@ -10,9 +10,11 @@ import commentRoutes from './routes/commentRoutes.js';
 import errorHandler from './middleware/errorHandler.js';
 
 dotenv.config();
-// Development defaults to reduce setup friction
-process.env.JWT_SECRET = process.env.JWT_SECRET || 'dev_secret_change_me';
-process.env.MONGO_URI = process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/helpdesk-mini';
+const { MONGO_URI, JWT_SECRET } = process.env;
+if (!MONGO_URI || !JWT_SECRET) {
+  console.error('Missing required env vars. Set MONGO_URI and JWT_SECRET in server/.env');
+  process.exit(1);
+}
 await connectDB();
 
 const app = express();
