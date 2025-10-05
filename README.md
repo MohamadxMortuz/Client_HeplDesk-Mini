@@ -57,6 +57,3 @@ client/
 - See `.gitignore` for ignored files (node modules, build artifacts, env files, editor settings).
 - Ensure your API base URL/config is set correctly in `src/api.js` for your environment.
 
-## Repository
-
-GitHub: `https://github.com/MohamadxMortuz/Client_HeplDesk-Mini.git`
