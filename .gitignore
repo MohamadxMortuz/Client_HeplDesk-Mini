@@ -1,0 +1,68 @@
+# See https://github.com/github/gitignore/blob/main/Node.gitignore
+# Dependencies
+node_modules/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Diagnostic reports
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage
+coverage
+*.lcov
+
+# Build output
+build/
+dist/
+.temp/
+.cache/
+
+# Editor directories and files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store
+Thumbs.db
+
+# Env files
+.env
+.env.*
+
+# Misc
+*.local
+*.orig
+
+# Framework/tool caches
+.next/
+.nuxt/
+.cache-loader/
+.parcel-cache/
+.cache
+
+# React Native
+.expo/
+
+# TypeScript
+*.tsbuildinfo
+
+# Lockfiles (keep if needed)
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
