@@ -29,27 +29,27 @@ The app will run at `http://localhost:3000` by default.
 
 ```text
 client/
-  package.json
-  package-lock.json
-  public/
-    index.html
-  src/
-    api.js
-    App.js
-    index.css
-    index.js
-    components/
-      Navbar.js
-      ProtectedRoute.js
-    contexts/
-      UserContext.js
-    pages/
-      BreachedTickets.js
-      Login.js
-      NewTicket.js
-      Register.js
-      TicketDetail.js
-      Tickets.js
+├── package.json
+├── package-lock.json
+├── public/
+│   └── index.html
+└── src/
+    ├── api.js
+    ├── App.js
+    ├── index.css
+    ├── index.js
+    ├── components/
+    │   ├── Navbar.js
+    │   └── ProtectedRoute.js
+    ├── contexts/
+    │   └── UserContext.js
+    └── pages/
+        ├── BreachedTickets.js
+        ├── Login.js
+        ├── NewTicket.js
+        ├── Register.js
+        ├── TicketDetail.js
+        └── Tickets.js
 ```
 
 ## Notes
